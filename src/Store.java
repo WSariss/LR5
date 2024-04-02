@@ -46,4 +46,18 @@ public class Store {
         System.out.println("Location: " + location);
         System.out.println("Number of Items: " + numOfItems);
     }
+
+    public static void main(String[] args) {
+        // Створення об'єкту першого магазину
+        Store store1 = new Store("Store A", "Location A", 100);
+
+        // Виведення інформації про перший магазин
+        store1.displayInfo();
+
+        // Створення об'єкту другого магазину
+        Store store2 = new Store("Store B", "Location B", 200);
+
+        // Виведення інформації про другий магазин
+        store2.displayInfo();
+    }
 }

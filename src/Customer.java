@@ -41,4 +41,18 @@ public class Customer {
         System.out.println("Address: " + address);
         System.out.println("Age: " + age);
     }
+
+    public static void main(String[] args) {
+        // Створення об'єкту першого покупця
+        Customer customer1 = new Customer("John Doe", "123 Main St", 30);
+
+        // Виведення інформації про першого покупця
+        customer1.displayInfo();
+
+        // Створення об'єкту другого покупця
+        Customer customer2 = new Customer("Jane Smith", "456 Elm St", 25);
+
+        // Виведення інформації про другого покупця
+        customer2.displayInfo();
+    }
 }
