@@ -1,4 +1,5 @@
 public class Store {
+    // Змінні класу з приватним модифікатором доступу
     private String name;      // Назва магазину
     private String location;  // Місцезнаходження магазину
     private int numOfItems;   // Кількість товарів в магазині
@@ -10,38 +11,39 @@ public class Store {
         this.numOfItems = numOfItems;
     }
 
-    // Метод для отримання назви магазину
-    public String getName() {
+    // Метод для отримання назви магазину з модифікатором доступу public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public String getName() {  // Зазначено модифікатор "public" для доступу до назви магазину
         return name;
     }
 
-    // Метод для встановлення назви магазину
-    public void setName(String name) {
+    public void setName(String name) {  // Зазначено модифікатор "public" для зміни назви магазину
         this.name = name;
     }
 
-    // Метод для отримання місцезнаходження магазину
-    public String getLocation() {
+    // Методи для отримання місцезнаходження магазину також мають модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public String getLocation() {  // Зазначено модифікатор "public" для доступу до місцезнаходження магазину
         return location;
     }
 
-    // Метод для встановлення місцезнаходження магазину
-    public void setLocation(String location) {
+    public void setLocation(String location) {  // Зазначено модифікатор "public" для зміни місцезнаходження магазину
         this.location = location;
     }
 
-    // Метод для отримання кількості товарів в магазині
-    public int getNumOfItems() {
+    // Методи для отримання кількості товарів в магазині також мають модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public int getNumOfItems() {  // Зазначено модифікатор "public" для доступу до кількості товарів в магазині
         return numOfItems;
     }
 
-    // Метод для встановлення кількості товарів в магазині
-    public void setNumOfItems(int numOfItems) {
+    public void setNumOfItems(int numOfItems) {  // Зазначено модифікатор "public" для зміни кількості товарів в магазині
         this.numOfItems = numOfItems;
     }
 
-    // Метод для виведення інформації про магазин
-    public void displayInfo() {
+    // Метод для виведення інформації про магазин,також має модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public void displayInfo() {  // Зазначено модифікатор "public" для виведення інформації про магазин
         System.out.println("Store Name: " + name);
         System.out.println("Location: " + location);
         System.out.println("Number of Items: " + numOfItems);

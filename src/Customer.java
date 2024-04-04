@@ -1,4 +1,5 @@
 public class Customer {
+    // Змінні класу з приватним модифікатором доступу
     private String name;    // Ім'я покупця
     private String address; // Адреса покупця
     private int age;        // Вік покупця
@@ -10,33 +11,39 @@ public class Customer {
         this.age = age;
     }
 
-    // Метод для встановлення імені покупця
-    public void setName(String name) {
+    // Метод для встановлення імені покупця має модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public void setName(String name) {  // Зазначено модифікатор "public" для зміни імені покупця
         this.name = name;
     }
 
-    // Метод для отримання адреси покупця
-    public String getAddress() {
+    // Метод для отримання адреси покупця також має модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public String getAddress() {  // Зазначено модифікатор "public" для доступу до адреси покупця
         return address;
     }
 
-    // Метод для встановлення адреси покупця
-    public void setAddress(String address) {
+    // Метод для встановлення адреси покупця також має модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public void setAddress(String address) {  // Зазначено модифікатор "public" для зміни адреси покупця
         this.address = address;
     }
 
-    // Метод для отримання віку покупця
-    public int getAge() {
+    // Метод для отримання віку покупця також має модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public int getAge() {  // Зазначено модифікатор "public" для доступу до віку покупця
         return age;
     }
 
-    // Метод для встановлення віку покупця
-    public void setAge(int age) {
+    // Метод для встановлення віку покупця також має модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public void setAge(int age) {  // Зазначено модифікатор "public" для зміни віку покупця
         this.age = age;
     }
 
-    // Метод для виведення інформації про покупця
-    public void displayInfo() {
+    // Метод для виведення інформації про покупця,також має модифікатор public тому, що
+    // потрібно, щоб змінні були доступні для всіх.
+    public void displayInfo() {  // Зазначено модифікатор "public" для виведення інформації про покупця
         System.out.println("Name: " + name);
         System.out.println("Address: " + address);
         System.out.println("Age: " + age);
