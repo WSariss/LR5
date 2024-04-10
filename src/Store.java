@@ -3,12 +3,15 @@ public class Store {
     private String name;      // Назва магазину
     private String location;  // Місцезнаходження магазину
     private int numOfItems;   // Кількість товарів в магазині
+    // Статична змінна для підрахунку загальної кількості товарів у всіх магазинах
+    private static int totalItems = 0;
 
     // Конструктор класу Store
     public Store(String name, String location, int numOfItems) {
         this.name = name;
         this.location = location;
         this.numOfItems = numOfItems;
+        totalItems += numOfItems; // Додавання кількості товарів цього магазин до загальної кількості товарів
     }
 
     // Методи для отримання назви магазину з модифікатором доступу public,
@@ -50,6 +53,21 @@ public class Store {
         System.out.println("Number of Items: " + numOfItems);
     }
 
+    public static void displayTotalItems(){
+        System.out.println("Total items in all stores: " + totalItems);
+    }
+
+    // Статичний метод для порівняння кількості товарів удвох магазинах
+    public static void compareStores(Store store1, Store store2) {
+        if (store1.getNumOfItems() > store2.getNumOfItems()) {
+            System.out.println(store1.getName() + "has more items than" + store2.getName());
+        } else if (store1.getNumOfItems() < store2.getNumOfItems()) {
+            System.out.println(store2.getName() + "has more items than" + store1.getName());
+        } else {
+            System.out.println("Both stores have the same number of items.");
+        }
+    }
+
     public static void main(String[] args) {
         // Створення об'єкту першого магазину
         Store store1 = new Store("Store A", "Location A", 100);
@@ -62,5 +80,11 @@ public class Store {
 
         // Виведення інформації про другий магазин
         store2.displayInfo();
+
+        // Виведення загальної кількості товарів у всіх магазинах
+        Store.displayTotalItems();
+
+        // Порівняння кількості товарів у двох магазинах
+        Store.compareStores(store1, store2);
     }
 }

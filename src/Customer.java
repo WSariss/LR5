@@ -4,11 +4,20 @@ public class Customer {
     private String address; // Адреса покупця
     private int age;        // Вік покупця
 
+   // Статична змінна для підрахунку загальної кількості покуців
+    private static int totalCount = 0;
+
     // Конструктор класу Customer
     public Customer(String name, String address, int age) {
         this.name = name;
         this.address = address;
         this.age = age;
+        totalCount++; // Збільшення лічильника при створенні нового об'єкту Customer
+    }
+
+    // Метод для отримання загальної кількості покупців (статичний метод)
+    public static int getTotalCount() {
+        return totalCount;
     }
 
     // Метод для встановлення імені покупця має модифікатор public тому, що
@@ -61,5 +70,8 @@ public class Customer {
 
         // Виведення інформації про другого покупця
         customer2.displayInfo();
+
+        // Виклик статичного методу для виведеня загальної кількості покупців
+        System.out.println("Total customers: " + Customer.getTotalCount());
     }
 }
